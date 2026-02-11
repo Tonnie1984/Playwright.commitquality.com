@@ -35,10 +35,10 @@ Since this website is designed as a sandbox for QA engineers, this plan focuses 
 
 | Test Case ID | Scenario | Steps | Expected Result |
 | --- | --- | --- | --- |
-| **TC-HOME-01** | **Verify Product Table Loading** | 1. Navigate to the homepage.|2.Check for the visibility of the product table. | The table should load with columns: ID, Name, Price, and Date Stocked. Data rows should be visible. |
-| **TC-HOME-02** | **Filter Functionality** | 1. Enter a known product name (e.g., "Product 1") in the "Filter" input.|2. Click "Filter" or press Enter. | The table should update to show **only** rows matching the search criteria. |
-| **TC-HOME-03** | **Reset Button** | 1. Apply a filter.|2. Click the "Reset" button. | The filter input should clear, and the table should reload to show **all** products. |
-| **TC-HOME-04** | **Show More (Pagination)** | 1. Scroll to the bottom of the list.| 2. Click "Show More". | Additional products (if available in the mock DB) should append to the bottom of the table without a full page refresh. |
+| **TC-HOME-01** | **Verify Product Table Loading** | 1. Navigate to the homepage.<br> 2.Check for the visibility of the product table. | The table should load with columns: ID, Name, Price, and Date Stocked. Data rows should be visible. |
+| **TC-HOME-02** | **Filter Functionality** | 1. Enter a known product name (e.g., "Product 1") in the "Filter" input.<br> 2. Click "Filter" or press Enter. | The table should update to show **only** rows matching the search criteria. |
+| **TC-HOME-03** | **Reset Button** | 1. Apply a filter.<br>2. Click the "Reset" button. | The filter input should clear, and the table should reload to show **all** products. |
+| **TC-HOME-04** | **Show More (Pagination)** | 1. Scroll to the bottom of the list.<br>2. Click "Show More". | Additional products (if available in the mock DB) should append to the bottom of the table without a full page refresh. |
 | **TC-HOME-05** | **Verify "Add Product" CTA** | 1. Click the "Add Product" button/link. | User should be redirected to `/add-product`. |
 
 ### B. Add Product Page
@@ -47,10 +47,10 @@ Since this website is designed as a sandbox for QA engineers, this plan focuses 
 
 | Test Case ID | Scenario | Steps | Expected Result |
 | --- | --- | --- | --- |
-| **TC-ADD-01** | **Create Product (Happy Path)** | 1. Enter a valid "Name".|2. Enter a numeric "Price".|3. Select a "Date Stocked".|4. Click "Submit". | The system should acknowledge the submission, and the new product should appear on the Home Page list (verify via ID). |
-| **TC-ADD-02** | **Empty Field Validation** | 1. Leave "Name" empty.|2. Click "Submit". | The system should block submission and display a validation error (e.g., "Field required"). |
-| **TC-ADD-03** | **Price Field Validation** | 1. Enter text (e.g., "Twenty") in the "Price" field.|2. Click "Submit". | The field should either reject the input type or show an error message upon submission. |
-| **TC-ADD-04** | **Cancel Operation** | 1. Fill in fields.|2. Click "Cancel". | The form should clear, or the user should be redirected to the Home Page without saving. |
+| **TC-ADD-01** | **Create Product (Happy Path)** | 1. Enter a valid "Name".<br>2. Enter a numeric "Price".<br>3. Select a "Date Stocked".<br>4. Click "Submit". | The system should acknowledge the submission, and the new product should appear on the Home Page list (verify via ID). |
+| **TC-ADD-02** | **Empty Field Validation** | 1. Leave "Name" empty.<br>2. Click "Submit". | The system should block submission and display a validation error (e.g., "Field required"). |
+| **TC-ADD-03** | **Price Field Validation** | 1. Enter text (e.g., "Twenty") in the "Price" field.<br>2. Click "Submit". | The field should either reject the input type or show an error message upon submission. |
+| **TC-ADD-04** | **Cancel Operation** | 1. Fill in fields.<br>2. Click "Cancel". | The form should clear, or the user should be redirected to the Home Page without saving. |
 
 ### C. Practice Page (Automation Challenges)
 
@@ -73,7 +73,7 @@ Since this website is designed as a sandbox for QA engineers, this plan focuses 
 
 | Test Case ID | Scenario | Steps | Expected Result |
 | --- | --- | --- | --- |
-| **TC-LOG-01** | **Invalid Login** | 1. Enter "test" / "test" | Click "Login". | Error message: "Invalid username or password" (or similar). |
+| **TC-LOG-01** | **Invalid Login** | 1. Enter "test" / "test" <br> Click "Login". | Error message: "Invalid username or password" (or similar). |
 | **TC-LOG-02** | **Valid Login** | 1. Enter valid credentials (usually `admin` / `admin` for demo sites, or check `/learn` for hints). | Successful redirection to a dashboard or a change in the header (e.g., "Logout" button appears). |
 
 ---
