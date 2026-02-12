@@ -27,10 +27,15 @@ export default defineConfig({
   use: {
     
     baseURL: 'https://commitquality.com/',
+    actionTimeout: 10000,
+    navigationTimeout: 15000,
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'retain-on-failure',
     video: 'retain-on-failure',
+  },
+  expect: {
+    timeout: 5000, 
   },
 
   /* Configure projects for major browsers */

@@ -18,9 +18,15 @@ export class HomePage extends BasePage {
         this.showMoreButton = page.getByTestId('show-more-button');
     }
 
+    async open() {
+        await this.page.goto("/");
+        await this.filterTextbox.waitFor({ state: 'visible' });
+    }
+
     async filterByName(productName: string) {
         await this.filterTextbox.fill(productName);
         await this.filterButton.click();
+        await this.visibleProductNames.first().waitFor({ state: 'visible' });
     }
 
     async resetFilters() {
@@ -33,5 +39,14 @@ export class HomePage extends BasePage {
 
     async clickShowMore() {
         await this.showMoreButton.click();
+    }
+
+    async getTableHeaderValues(): Promise<string[]> {
+        const headers = this.page.locator('thead th');
+        return await headers.allTextContents();
+    }
+
+    get visibleProductNames() {
+        return this.page.locator('tbody tr td:nth-child(2)');
     }
 }
