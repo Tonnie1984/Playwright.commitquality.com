@@ -25,7 +25,7 @@ export default defineConfig({
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    
+
     baseURL: 'https://commitquality.com/',
     actionTimeout: 10000,
     navigationTimeout: 15000,
@@ -35,7 +35,7 @@ export default defineConfig({
     video: 'retain-on-failure',
   },
   expect: {
-    timeout: 5000, 
+    timeout: 5000,
   },
 
   /* Configure projects for major browsers */
