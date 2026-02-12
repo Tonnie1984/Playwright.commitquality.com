@@ -1,5 +1,4 @@
 import { test, expect } from './Support/fixtures';
-import { HomePage } from './Pages/HomePage';
 
 
 test.describe('A. Home Page (Product List) tests', () => {
@@ -82,14 +81,20 @@ test.describe('A. Home Page (Product List) tests', () => {
             await expect.soft(homePage.showMoreButton, " Show More Button Still displayeed").not.toBeVisible();
             await expect(paginatedList, " ERROR: No more elements displayeed in the list").toBeGreaterThan(rowCount);
         })
-        
-        
-        
-        
     })
-    
 
-
-
+    test('Verify "Add Product" CTA', async ({ homePage, page }) => {
+        await test.step('1. Navigate to the homepage.', async () => {
+            await homePage.open();
+        })
+        await test.step(' Click the "Add Product" button/link.".', async () => {
+            await homePage.addProductButton.click();
+        })
+        await test.step('User should be redirected to /add-product.', async () => {
+           
+            await expect(page, " Redirection is not to add product page").toHaveURL(/.*add-product/);
+        })
+                
+    })
 })
 
