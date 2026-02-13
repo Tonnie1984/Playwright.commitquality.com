@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "sourceMap": true,
+        "outDir": "dist",
+        "strict": true,
+        "types": [
+            "node",
+            "@playwright/test"
+        ],
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+    },
+    "include": [
+        "tests/**/*.ts",
+        "Pages/**/*.ts",
+        "playwright.config.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}

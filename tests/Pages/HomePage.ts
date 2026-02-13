@@ -1,4 +1,4 @@
-import {type Locator,  Page } from "@playwright/test"
+import { type Locator, Page } from "@playwright/test"
 import { BasePage } from "./BasePage";
 
 
@@ -8,8 +8,8 @@ export class HomePage extends BasePage {
     readonly resetFilterButton: Locator;
     readonly addProductButton: Locator;
     readonly showMoreButton: Locator;
-    
-    constructor(page: Page){
+
+    constructor(page: Page) {
         super(page);
         this.filterTextbox = page.getByRole('textbox', { name: 'Filter by product name' });
         this.filterButton = page.getByTestId('filter-button');
